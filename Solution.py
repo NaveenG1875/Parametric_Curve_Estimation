@@ -25,9 +25,12 @@ def objective(params):
     tree = cKDTree(predicted_points)
 
     data_points = np.column_stack((x_data, y_data))
-    distances, _ = tree.query(data_points)
+    _, indices = tree.query(data_points, p=1)
 
-    error = np.sum(distances)
+    nearest_x = pred_x[indices]
+    nearest_y = pred_y[indices]
+
+    error = np.sum(np.abs(x_data - nearest_x) + np.abs(y_data - nearest_y))
     return error
 
 bounds = [(0, 50), (-0.05, 0.05), (0, 100)]
