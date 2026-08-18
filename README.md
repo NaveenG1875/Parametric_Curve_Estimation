@@ -1,7 +1,5 @@
 Parametric Curve Estimation
 
-Research and Development / AI Assignment
-
 
 Problem Statement
 
@@ -190,6 +188,10 @@ $$
 $$
 y = 42 + t * \sin(30^\circ) + e^{0.03|t|} * \sin(0.3t) * \cos(30^\circ)
 $$
+
+
+Desmos link (graph)
+https://www.desmos.com/calculator/spqnnbm6k9
 
 
 Verification
